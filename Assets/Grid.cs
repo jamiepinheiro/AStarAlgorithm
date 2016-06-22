@@ -22,8 +22,8 @@ public class Grid : MonoBehaviour {
 		for(int x = 0; x < size; x++){
 			for(int y = 0; y < size; y++){
 				grid[y, x] = (GameObject) Instantiate(cube, new Vector3(x, y, 0), transform.rotation);
-				grid[y, x].GetComponent<Renderer>().material.color = Color.black;
-				grid[y, x].gameObject.tag = "Wall";
+				grid[y, x].GetComponent<Renderer>().material.color = Color.white;
+				grid[y, x].gameObject.tag = "Node";
 				if(x == startX && y == startY){
 					grid[y, x].tag = "Start";
 					grid[y, x].GetComponent<Renderer>().material.color = Color.blue;
